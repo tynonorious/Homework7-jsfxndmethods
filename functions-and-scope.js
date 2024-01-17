@@ -137,9 +137,15 @@ averageGrade(array)
 
 // ---- Verwachte uitkomst: 9
 
+let max = 0
 
+for (let i = 0; i < grades.length; i++) {
+        if (max < grades[i]) {
+            max = grades[i]
+        }
+}
 
-
+console.log(max)
 
 /* 3b: Omschrijven tot een herbruikbare functie */
 // Schrijf een functie genaamd highestGrade, die een array van cijfers verwacht (zoals grades) en het hoogste cijfer teruggeeft. Gebruik hiervoor jouw antwoord van 3a.
@@ -150,3 +156,25 @@ averageGrade(array)
 // highestGrade(grades) geeft 9
 // highestGrade([6, 4, 5]) geeft 6
 // highestGrade([8, 9, 4, 6, 10]) geeft 10
+
+array = grades
+
+function highestGrade(array) {
+    max = 0
+    for (let i = 0; i < array.length; i++) {
+        if (max < array[i]) {
+            max = array[i]
+        }
+    }
+    console.log(max)
+}
+
+highestGrade(array)
+
+array = [6, 4, 5]
+
+highestGrade(array)
+
+array = [8, 9, 4, 6, 10]
+
+highestGrade(array)
