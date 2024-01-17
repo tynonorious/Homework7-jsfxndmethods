@@ -16,6 +16,15 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 
 // ---- Verwachte uitkomst: 6
 
+let counter = 0
+
+for (let i = 0; i < grades.length; i++) {
+        if (grades[i] >= 8) {
+            counter = counter + 1;
+        }
+}
+
+console.log(counter)
 
 /*  1b: Omschrijven tot een herbruikbare functie   */
 // Schrijf een functie genaamd cumLaude, die een array van cijfers verwacht (zoals grades) en het aantal Cum laude studenten teruggeeft. Gebruik hiervoor jouw antwoord van 1a.
@@ -27,8 +36,26 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // cumLaude([6, 4, 5]) geeft 0
 // cumLaude([8, 9, 4, 6, 10]) geeft 3
 
+let array = grades
+function cumLaude(array) {
+    let counter = 0
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] >= 8) {
+            counter = counter + 1;
+        }
+    }
+    console.log(counter)
+}
 
+cumLaude(array)
 
+array = [6, 4, 5]
+
+cumLaude(array)
+
+array = [8, 9, 4, 6, 10]
+
+cumLaude(array)
 
 /* Opdracht  2: Gemiddeld cijfer */
 
@@ -42,6 +69,12 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 
 // ---- Verwachte uitkomst: 6.642857142857143
 
+let mean = 0
+for (let i = 0; i < grades.length; i++) {
+    mean = mean + grades[i]
+}
+mean = mean / grades.length
+console.log(mean)
 
 /* 2b: Omschrijven tot een herbruikbare functie */
 // Schrijf een functie genaamd averageGrade, die een array van cijfers verwacht (zoals grades) en het gemiddelde cijfer teruggeeft. Gebruik hiervoor jouw antwoord van 2a.
@@ -53,13 +86,45 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // averageGrade([6, 4, 5]) geeft xxxx
 // averageGrade([8, 9, 4, 6, 10]) geeft xxxx
 
+array = grades
+
+function averageGrade(array) {
+    let sum = 0
+    for (let i = 0; i < array.length; i++) {
+        sum = sum + array[i]
+    }
+    mean = sum / array.length
+    console.log(mean)
+}
+
+averageGrade(array)
+
+array = [6, 4, 5]
+
+averageGrade(array)
+
+array = [8, 9, 4, 6, 10]
+
+averageGrade(array)
+
 
 /* 2c: Afronden op twee decimalen */
 // Zorg ervoor dat het gemiddelde cijfer dat wordt teruggegeven uit de functie netjes wordt afgerond op twee decimalen.
 // Tip: Google is your best friend!
 
+array = grades
 
+function averageGrade(array) {
+    let sum = 0
+    for (let i = 0; i < array.length; i++) {
+        sum = sum + array[i]
+    }
+    mean = sum / array.length
+    let roundedMean = mean.toFixed(2);
+    console.log(roundedMean)
+}
 
+averageGrade(array)
 
 /* Bonusopdracht: hoogste cijfer */
 
@@ -71,6 +136,9 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // Log het antwoord in de terminal.
 
 // ---- Verwachte uitkomst: 9
+
+
+
 
 
 /* 3b: Omschrijven tot een herbruikbare functie */
